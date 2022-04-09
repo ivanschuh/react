@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 
-function NomeClasse() {
+function Template() {
+  // Declare variáveis de state
+  
 
   return (
     <div>
+     
 
       
     </div>
   );
 }
-export default NomeClasse;
+
+export default Template;

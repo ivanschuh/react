@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function UsuariosList(props) {
     return (
         <div>
-            <h4>Manutenção Usuário</h4>
-            <button onClick={props.onClickAtualizar} type="button" class="btn btn-primary btn-sm">Atualizar Lista</button>
-            <button type="button" class="btn btn-primary btn-sm" onClick={props.inserir}>Inserir</button>
+            <h4>MANUTENÇÃO DE USUÁRIOS</h4>
+
+            <button onClick={props.onClickAtualizar} type="button"
+                class="btn btn-primary btn-sm">Atualizar Lista</button>
+
+            <button onClick={props.onClickInserir} type="button"
+                class="btn btn-primary btn-sm">Inserir</button>
+
             <table className='table'>
                 <thead>
                     <tr>
@@ -14,7 +20,7 @@ function UsuariosList(props) {
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Celular</th>
-                        <th>Ações</th>
+                        <th>Operações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,8 +32,8 @@ function UsuariosList(props) {
                             <td>{o.email}</td>
                             <td>{o.celular}</td>
                             <td>
-                                <button  type="button" class="btn btn-primary btn-sm">Alterar</button>
-                                <button  type="button" class="btn btn-primary btn-sm">Excluir</button>
+                                <button type="button" class="btn btn-primary btn-sm">Alterar</button>
+                                <button type="button" class="btn btn-primary btn-sm">Excluir</button>
                             </td>
                         </tr>
                     ))) : (
@@ -37,7 +43,9 @@ function UsuariosList(props) {
                     )}
                 </tbody>
             </table>
-        </div>
+
+        </div >
     );
 }
+
 export default UsuariosList;
